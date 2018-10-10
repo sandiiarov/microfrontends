@@ -1,0 +1,13 @@
+{
+  "name": "components",
+  "version": "1.0.0",
+  "main": "src",
+  "scripts": {},
+  "dependencies": {
+    "rebass": "^3.0.0-9",
+    "styled-components": "^4.0.0-beta.11.2"
+  },
+  "peerDependencies": {
+    "react": "^16.5.2"
+  }
+}

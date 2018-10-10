@@ -1,0 +1,48 @@
+const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+
+module.exports = {
+  entry: "./src/index.js",
+  output: {
+    path: path.resolve(__dirname, "../../", "build")
+  },
+  stats: "verbose",
+  devServer: {
+    historyApiFallback: true,
+    proxy: {
+      "/packages/navigation": {
+        target: "http://localhost:9010",
+        pathRewrite: { "^/packages/navigation": "" }
+      },
+      "/packages/app1": {
+        target: "http://localhost:9001",
+        pathRewrite: { "^/packages/app1": "" }
+      },
+      "/packages/app2": {
+        target: "http://localhost:9002",
+        pathRewrite: { "^/packages/app2": "" }
+      }
+    }
+  },
+  module: {
+    rules: [
+      {
+        parser: {
+          system: false
+        }
+      },
+      {
+        test: /\.js$/,
+        use: "babel-loader",
+        exclude: /node_modules/
+      }
+    ]
+  },
+  plugins: [
+    CopyWebpackPlugin([
+      { from: "index.html", to: "index.html" },
+      { from: "packagemap.json", to: "packagemap.json" },
+      { from: "node_modules/externals/lib", to: "lib" }
+    ])
+  ]
+};

@@ -1,0 +1,8 @@
+{
+  "packages": {
+    "react": "/lib/react.js",
+    "react-dom": "/lib/react-dom.js",
+    "single-spa-react": "/lib/single-spa-react.js",
+    "components": "/lib/components.js"
+  }
+}

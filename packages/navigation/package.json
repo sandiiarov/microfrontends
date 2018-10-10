@@ -1,0 +1,22 @@
+{
+  "name": "navigation",
+  "version": "1.0.0",
+  "scripts": {
+    "start": "NODE_ENV=development webpack-dev-server -d --port 9010",
+    "build": "NODE_ENV=production webpack -p --progress",
+    "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "single-spa": "^4.0.1"
+  },
+  "devDependencies": {
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
+  },
+  "peerDependencies": {
+    "components": "^1.0.0",
+    "react": "^16.5.2",
+    "react-dom": "^16.5.2",
+    "single-spa-react": "^2.8.1"
+  }
+}
