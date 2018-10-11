@@ -55,6 +55,15 @@ npx http-server-spa /
 
 Open up http://localhost:8080 in a web browser.
 
+## How to bump version of SPA
+
+Jump into any of `app1`, `app2`, `navigation` packages.
+
+```sh
+npm version patch
+npm run build
+```
+
 # Packages
 
 ## main
