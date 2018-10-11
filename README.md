@@ -64,6 +64,8 @@ npm version patch
 npm run build
 ```
 
+Open build/versions.json file and change version of package.
+
 # Packages
 
 ## main
