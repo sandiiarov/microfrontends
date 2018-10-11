@@ -9,7 +9,7 @@ module.exports = {
     components: "./node_modules/components"
   },
   output: {
-    path: path.resolve(__dirname, "lib"),
+    path: path.resolve(__dirname, "build"),
     filename: "[name].js",
     libraryTarget: "umd",
     umdNamedDefine: true
