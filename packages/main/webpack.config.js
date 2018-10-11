@@ -42,7 +42,8 @@ module.exports = {
     CopyWebpackPlugin([
       { from: "index.html", to: "index.html" },
       { from: "packagemap.json", to: "packagemap.json" },
-      { from: "node_modules/externals/lib", to: "lib" }
+      { from: "node_modules/externals/lib", to: "lib" },
+      { from: "versions.json", to: "versions.json" }
     ])
   ]
 };

@@ -22,7 +22,7 @@ const register = ({ name, activeWhen, versions }) => {
   let versions = {};
 
   if (process.env.NODE_ENV === "production") {
-    const response = await fetch("http://localhost:9100/versions");
+    const response = await fetch("/versions.json");
     versions = await response.json();
   }
 
