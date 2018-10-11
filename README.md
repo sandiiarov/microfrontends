@@ -27,13 +27,7 @@ cd containerized_build
 lerna bootstrap
 ```
 
-Jump into the main package:
-
-```sh
-npm start
-```
-
-Jump into `app1`, `app2`, `navigation` packages:
+Jump into `main`, `externals`, `app1`, `app2`, `navigation` packages:
 
 ```sh
 npm start
