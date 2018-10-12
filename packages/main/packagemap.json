@@ -1,8 +1,11 @@
 {
+  "path_prefix": "/lib",
   "packages": {
-    "react": "/lib/react.js",
-    "react-dom": "/lib/react-dom.js",
-    "single-spa-react": "/lib/single-spa-react.js",
-    "components": "/lib/components.js"
+    "react": "react@16.5.2.js",
+    "react-dom": "react-dom@16.5.2.js",
+    "single-spa-react": "single-spa-react@2.8.1.js",
+    "react-router-dom": "react-router-dom@4.3.1.js",
+    "loadable-components": "loadable-components@2.2.3.js",
+    "components": "components@1.0.0.js"
   }
 }

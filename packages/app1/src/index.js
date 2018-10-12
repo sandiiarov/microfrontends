@@ -7,5 +7,6 @@ export const { bootstrap, mount, unmount } = singleSpaReact({
   React,
   ReactDOM,
   rootComponent: App,
+  suppressComponentDidCatchWarning: true,
   domElementGetter: () => document.getElementById("app1")
 });

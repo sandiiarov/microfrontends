@@ -2,9 +2,12 @@
   "name": "app2",
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server -d --port 9002",
+    "start": "NODE_ENV=development webpack-dev-server -d --port 9002 --hot",
     "build": "NODE_ENV=production webpack -p --progress",
     "postinstall": "npm run build"
+  },
+  "dependencies": {
+    "react-hot-loader": "^4.3.11"
   },
   "devDependencies": {
     "webpack": "^4.20.2",
@@ -12,8 +15,10 @@
   },
   "peerDependencies": {
     "components": "^1.0.0",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
-    "single-spa-react": "^2.8.1"
+    "react": "*",
+    "react-dom": "*",
+    "react-router-dom": "*",
+    "loadable-components": "*",
+    "single-spa-react": "*"
   }
 }

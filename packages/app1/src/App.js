@@ -1,21 +1,28 @@
 import React from "react";
 import { hot } from "react-hot-loader";
-import { Card } from "components";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from "react-router-dom";
+import loadable from "loadable-components";
+import Menu from "./Menu";
 
-class App extends React.Component {
-  componentWillMount() {
-    console.log("AAAA");
-  }
+const Page1 = loadable(() => import("./Page1"));
+const Page2 = loadable(() => import("./Page2"));
 
-  render() {
-    return (
-      <Card
-        title="APP"
-        image="https://cdn-images-1.medium.com/max/2000/1*qXcjSfRj0C0ir2yMsYiRyw.jpeg"
-        text="bla bla"
-      />
-    );
-  }
-}
+const App = () => (
+  <Router>
+    <div style={{ padding: 20 }}>
+      <Switch>
+        <Redirect exact from="/app1" to="/app1/1" />
+      </Switch>
+      <Route path="/app1/:page" component={Menu} />
+      <Route exact path="/app1/1" component={Page1} />
+      <Route exact path="/app1/2" component={Page2} />
+    </div>
+  </Router>
+);
 
 export default hot(module)(App);

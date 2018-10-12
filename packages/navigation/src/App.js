@@ -1,15 +1,13 @@
 import React from "react";
-import { navigateToUrl } from "single-spa";
+import { BrowserRouter as Router } from "react-router-dom";
+import { Header } from "components";
 
 const App = () => (
-  <div>
-    <button onClick={() => navigateToUrl("/app1")} width={100} bg="magenta">
-      APP1
-    </button>
-    <button onClick={() => navigateToUrl("/app2")} width={100} bg="blue">
-      APP2
-    </button>
-  </div>
+  <Router>
+    <Header
+      tabs={[{ label: "APP 1", to: "/app1" }, { label: "APP 2", to: "/app2" }]}
+    />
+  </Router>
 );
 
 export default App;
