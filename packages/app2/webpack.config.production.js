@@ -3,21 +3,11 @@ const ManifestPlugin = require("webpack-manifest-plugin");
 const { version } = require("./package.json");
 const { output, babel, manifest } = require("./webpack.config.common");
 
-module.exports = [
-  {
-    entry: "./src/index.js",
-    output: output(version),
-    module: {
-      rules: [babel()]
-    },
-    plugins: [new PeerDepsExternalsPlugin(), new ManifestPlugin(manifest)]
-  },
-  {
-    entry: "./src/index.js",
-    output: output("latest"),
-    module: {
-      rules: [babel()]
-    },
-    plugins: [new PeerDepsExternalsPlugin(), new ManifestPlugin(manifest)]
-  }
-];
+const VERSIONS = [version, "latest"];
+
+module.exports = VERSIONS.map(ver => ({
+  entry: "./src/index.js",
+  output: output(ver),
+  module: { rules: [babel()] },
+  plugins: [new PeerDepsExternalsPlugin(), new ManifestPlugin(manifest)]
+}));
