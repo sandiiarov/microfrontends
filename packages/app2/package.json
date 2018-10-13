@@ -2,8 +2,8 @@
   "name": "app2",
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=development webpack-dev-server -d --port 9002 --hot",
-    "build": "NODE_ENV=production webpack -p --progress",
+    "start": "NODE_ENV=development webpack-dev-server -d --port 9002 --hot --config ./webpack.config.development.js",
+    "build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.production.js",
     "postinstall": "npm run build"
   },
   "dependencies": {

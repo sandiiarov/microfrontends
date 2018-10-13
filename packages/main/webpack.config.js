@@ -6,7 +6,6 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, "../../", "build")
   },
-  stats: "verbose",
   devServer: {
     historyApiFallback: true,
     proxy: {
@@ -40,10 +39,9 @@ module.exports = {
   },
   plugins: [
     CopyWebpackPlugin([
-      { from: "index.html", to: "index.html" },
-      { from: "packagemap.json", to: "packagemap.json" },
-      { from: "node_modules/externals/build", to: "lib" },
-      { from: "versions.json", to: "versions.json" }
+      { from: "src/index.html", to: "index.html" },
+      { from: "src/packagemap.json", to: "packagemap.json" },
+      { from: "node_modules/externals/lib", to: "lib" }
     ])
   ]
 };
