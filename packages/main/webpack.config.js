@@ -41,6 +41,14 @@ module.exports = {
     CopyWebpackPlugin([
       { from: "src/index.html", to: "index.html" },
       { from: "src/packagemap.json", to: "packagemap.json" },
+      {
+        from: "../../node_modules/systemjs/dist/system.min.js",
+        to: "lib/system.js"
+      },
+      {
+        from: "../../node_modules/systemjs/dist/extras/amd.min.js",
+        to: "lib/amd.js"
+      },
       { from: "node_modules/externals/lib", to: "lib" }
     ])
   ]
