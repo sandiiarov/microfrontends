@@ -8,7 +8,7 @@ const Menu = ({ match, history }) => (
       size="large"
       onClick={() => history.push("/app1/1")}
     >
-      Page 1
+      Structure
     </Button>
     <Button
       disabled={match.params.page === "2"}
