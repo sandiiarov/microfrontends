@@ -1,4 +1,4 @@
-# Containerized Build
+\*\*\*\*# Containerized Build
 
 The goal of this project is to provide an example of how to build app which consists of multiple single page applications (SPA's).
 
@@ -16,6 +16,10 @@ Each SPA should be self contained with its own build process. It should be indiv
 - [x] Hot module reloading for new SPAs (See APP1)
 
 This example is based here https://build-dqtmjjrowf.now.sh
+
+## Limitations
+
+- Impossible use webpack created dynamic imports.
 
 ## How to run this project in development mode
 
