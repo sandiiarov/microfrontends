@@ -8,7 +8,8 @@ const output = version => ({
   filename: "main.[hash].js",
   chunkFilename: "[name].[contenthash].js",
   path: path.resolve(build, version),
-  libraryTarget: "amd"
+  libraryTarget: "amd",
+  library: "app1"
 });
 
 const babel = () => ({

@@ -9,7 +9,7 @@ import {
 import loadable from "loadable-components";
 import Menu from "./Menu";
 
-const Page1 = loadable(() => import(/* webpackMode: "eager" */ "./Page1"));
+const Page1 = loadable(() => import(/* webpackMode: "lazy" */ "./Page1"));
 const Page2 = loadable(() => import(/* webpackMode: "eager" */ "./Page2"));
 
 const App = () => (

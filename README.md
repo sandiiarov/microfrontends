@@ -14,7 +14,7 @@ Each SPA should be self contained with its own build process. It should be indiv
 - [x] Share dev dependencies between all packages
 - [x] Use Externals package to build common packages to share dynamicly between SPAs
 - [x] Hot module reloading for new SPAs (See APP1)
-- [ ] Dynamic imports
+- [x] Dynamic imports
 
 This example is based here https://build-dqtmjjrowf.now.sh
 
