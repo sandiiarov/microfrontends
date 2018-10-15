@@ -2,7 +2,7 @@ import React from "react";
 import { Group } from "@vx/group";
 
 const Node = ({ node }) => {
-  const width = 100;
+  const width = 80;
   const height = 20;
 
   return (
