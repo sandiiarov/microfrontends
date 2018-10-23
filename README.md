@@ -39,7 +39,7 @@ Open up http://localhost:9000 in a web browser.
 ## How to run this project in production mode
 
 ```sh
-lerna bootstrap
+lerna bootstrap --hoist
 ```
 
 Jump into the build folder:
