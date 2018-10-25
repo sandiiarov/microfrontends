@@ -8,10 +8,10 @@
   },
   "dependencies": {
     "components": "^1.0.0",
-    "react": "^16.6.0",
-    "react-dom": "^16.6.0",
-    "react-router-dom": "^4.3.1",
-    "single-spa-react": "^2.8.1"
+    "react": "16.6.0",
+    "react-dom": "16.6.0",
+    "react-router-dom": "4.3.1",
+    "single-spa-react": "2.8.1"
   },
   "devDependencies": {
     "webpack": "^4.20.2",
@@ -22,7 +22,6 @@
     "react": "*",
     "react-dom": "*",
     "react-router-dom": "*",
-    "single-spa-react": "*",
-    "systemjs": "*"
+    "single-spa-react": "*"
   }
 }

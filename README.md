@@ -81,4 +81,4 @@ UI components lib
 
 This package builds all extenals packages (React, React-dom, Components, etc).
 
-Then those packages is shared between SPAs via SystemJS `packagemap.json`.
+Then those packages is shared between SPAs via `packagemap.json`.
