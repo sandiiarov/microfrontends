@@ -5,11 +5,7 @@ const { output, babel, manifest } = require("./webpack.config.common");
 module.exports = {
   entry: "./src/index.js",
   output: output("latest"),
-  devServer: {
-    publicPath: "/latest"
-  },
-  module: {
-    rules: [babel()]
-  },
+  devServer: { publicPath: "/latest" },
+  module: { rules: [babel()] },
   plugins: [new PeerDepsExternalsPlugin(), new ManifestPlugin(manifest)]
 };
