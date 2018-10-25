@@ -14,11 +14,10 @@
     "webpack-dev-server": "^3.1.9"
   },
   "peerDependencies": {
-    "components": "^1.0.0",
+    "components": "*",
     "react": "*",
     "react-dom": "*",
     "react-router-dom": "*",
-    "loadable-components": "*",
     "single-spa-react": "*"
   }
 }

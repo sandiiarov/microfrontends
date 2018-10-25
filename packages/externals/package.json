@@ -2,24 +2,23 @@
   "name": "externals",
   "version": "1.0.0",
   "scripts": {
-    "start": "NODE_ENV=development webpack -d --watch",
+    "start": "NODE_ENV=development webpack-dev-server -d --port 9050",
     "build": "NODE_ENV=production webpack -p --progress",
     "postinstall": "npm run build"
   },
   "dependencies": {
     "components": "^1.0.0",
-    "loadable-components": "^2.2.3",
-    "react": "^16.5.2",
-    "react-dom": "^16.5.2",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
     "react-router-dom": "^4.3.1",
     "single-spa-react": "^2.8.1"
   },
   "devDependencies": {
-    "webpack": "^4.20.2"
+    "webpack": "^4.20.2",
+    "webpack-dev-server": "^3.1.9"
   },
   "peerDependencies": {
     "components": "*",
-    "loadable-components": "*",
     "react": "*",
     "react-dom": "*",
     "react-router-dom": "*",

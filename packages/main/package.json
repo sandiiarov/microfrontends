@@ -12,7 +12,6 @@
     "systemjs": "^2.0.2"
   },
   "devDependencies": {
-    "externals": "^1.0.0",
     "webpack": "^4.20.2",
     "webpack-dev-server": "^3.1.9"
   }

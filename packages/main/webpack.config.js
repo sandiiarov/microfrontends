@@ -9,6 +9,10 @@ module.exports = {
   devServer: {
     historyApiFallback: true,
     proxy: {
+      "/lib": {
+        target: "http://localhost:9050",
+        pathRewrite: { "^/lib": "" }
+      },
       "/packages/navigation": {
         target: "http://localhost:9010",
         pathRewrite: { "^/packages/navigation": "" }
@@ -48,8 +52,7 @@ module.exports = {
       {
         from: "../../node_modules/systemjs/dist/extras/amd.min.js",
         to: "lib/amd.js"
-      },
-      { from: "node_modules/externals/lib", to: "lib" }
+      }
     ])
   ]
 };

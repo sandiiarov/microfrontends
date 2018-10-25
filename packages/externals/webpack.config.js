@@ -11,11 +11,10 @@ module.exports = {
     "react-dom": path.resolve(modules, "react-dom"),
     "single-spa-react": path.resolve(modules, "single-spa-react"),
     "react-router-dom": path.resolve(modules, "react-router-dom"),
-    "loadable-components": path.resolve(modules, "loadable-components"),
     components: "./node_modules/components"
   },
   output: {
-    path: path.resolve(__dirname, "lib"),
+    path: path.resolve(__dirname, "../../", "build/lib"),
     filename: ({ chunk: { name } }) => `[name]/[name]@${version(name)}.js`,
     libraryTarget: "umd",
     umdNamedDefine: true
