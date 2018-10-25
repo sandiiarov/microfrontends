@@ -8,3 +8,5 @@ If a developer wants to share React between SPAs he needs to do to:
 - add react to `peerDependencies` section
 - `lerna bootstrap --hoist`
 - add react to `packages/main/src/packagemap.json`
+
+#### What is `packagemap.json`? https://github.com/domenic/package-name-maps
