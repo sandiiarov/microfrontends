@@ -1,6 +1,6 @@
 # Externals package
 
-The root idea of this package is building shared libraries between SPAs. It is like a `vendor.js` file just one difference - splitting `vendor.js` on a few chucks (react.js, lodash.js, etc).
+The root idea of this package is building shared libraries between SPAs. It is like a `vendor.js` file splitted on a few chucks (react.js, lodash.js, etc).
 
 If a developer wants to share React between SPAs he needs to do to:
 
