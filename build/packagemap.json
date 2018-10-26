@@ -1,10 +1,43 @@
 {
-  "path_prefix": "/lib",
-  "packages": {
-    "react": "react@16.6.0.js",
-    "react-dom": "react-dom@16.6.0.js",
-    "single-spa-react": "single-spa-react@2.8.1.js",
-    "react-router-dom": "react-router-dom@4.3.1.js",
-    "components": "components@1.0.0.js"
+  "scopes": {
+    "/lib": {
+      "packages": {
+        "react": "/lib/react/react@16.6.0.js",
+        "react-dom": "/lib/react-dom/react-dom@16.6.0.js"
+      }
+    },
+    "/lib/components": {
+      "packages": {
+        "react": "/lib/react/react@16.6.0.js",
+        "react-dom": "/lib/react-dom/react-dom@16.6.0.js"
+      }
+    },
+    "/packages/navigation": {
+      "packages": {
+        "react": "/lib/react/react@16.6.0.js",
+        "react-dom": "/lib/react-dom/react-dom@16.6.0.js",
+        "single-spa-react": "/lib/single-spa-react/single-spa-react@2.8.1.js",
+        "react-router-dom": "/lib/react-router-dom/react-router-dom@4.3.1.js",
+        "components": "/lib/components/components@1.0.0.js"
+      }
+    },
+    "/packages/app1": {
+      "packages": {
+        "react": "/lib/react/react@16.6.0.js",
+        "react-dom": "/lib/react-dom/react-dom@16.6.0.js",
+        "single-spa-react": "/lib/single-spa-react/single-spa-react@2.8.1.js",
+        "react-router-dom": "/lib/react-router-dom/react-router-dom@4.3.1.js",
+        "components": "/lib/components/components@1.0.0.js"
+      }
+    },
+    "/packages/app2": {
+      "packages": {
+        "react": "/lib/react/react@16.6.0.js",
+        "react-dom": "/lib/react-dom/react-dom@16.6.0.js",
+        "single-spa-react": "/lib/single-spa-react/single-spa-react@2.8.1.js",
+        "react-router-dom": "/lib/react-router-dom/react-router-dom@4.3.1.js",
+        "components": "/lib/components/components@1.0.0.js"
+      }
+    }
   }
 }

@@ -8,6 +8,8 @@ import {
 } from "react-router-dom";
 import Menu from "./Menu";
 
+console.log(React.version);
+
 const Page1 = React.lazy(() => import("./Page1"));
 const Page2 = React.lazy(() => import("./Page2"));
 

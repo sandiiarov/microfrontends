@@ -1,25 +1,29 @@
 const path = require("path");
-const { dependencies } = require("./package.json");
 
-const entries = ({ current = [] }) =>
+const getPath = ({ app, package }) => {
+  try {
+    return require.resolve(`./node_modules/${app}/node_modules/${package}`);
+  } catch (err) {
+    return require.resolve(`../../node_modules/${package}`);
+  }
+};
+
+const entries = ({ app, dependencies }) =>
   Object.entries(dependencies).reduce(
-    (entries, [name]) => ({
+    (entries, [package]) => ({
       ...entries,
-      [name]: path.resolve(
-        __dirname,
-        current.includes(name) ? "./" : "../../",
-        "node_modules",
-        name
-      )
+      [package]: getPath({ app, package })
     }),
     {}
   );
 
-const version = name => dependencies[name].replace(/[^0-9\.]/g, "");
+const version = ({ dependencies, name }) =>
+  dependencies[name].replace(/[^0-9\.]/g, "");
 
-const output = () => ({
+const output = ({ dependencies }) => ({
   path: path.resolve(__dirname, "../../", "build/lib"),
-  filename: ({ chunk: { name } }) => `[name]/[name]@${version(name)}.js`,
+  filename: ({ chunk: { name } }) =>
+    `[name]/[name]@${version({ dependencies, name })}.js`,
   libraryTarget: "umd",
   umdNamedDefine: true
 });

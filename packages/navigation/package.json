@@ -6,15 +6,22 @@
     "build": "NODE_ENV=production webpack -p --progress --config ./webpack.config.production.js",
     "postinstall": "npm run build"
   },
+  "dependencies": {
+    "components": "^1.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "single-spa-react": "^2.8.1"
+  },
   "devDependencies": {
     "webpack": "^4.20.2",
     "webpack-dev-server": "^3.1.9"
   },
   "peerDependencies": {
-    "components": "*",
-    "react": "*",
-    "react-dom": "*",
-    "react-router-dom": "*",
-    "single-spa-react": "*"
+    "components": "^1.0.0",
+    "react": "^16.6.0",
+    "react-dom": "^16.6.0",
+    "react-router-dom": "^4.3.1",
+    "single-spa-react": "^2.8.1"
   }
 }
